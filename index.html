@@ -1,0 +1,680 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Islamophobia 132AC Final Project</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c32513ba-525c-44ad-abc6-376605102369" class="page sans"><header><h1 class="page-title">Islamophobia 132AC Final Project</h1><p class="page-description"></p></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="07b3abc1-35d2-48af-ba6e-3caa60638006"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Ved Sarkar<br/>Michelle Wu<br/></div></figure><h1 id="3aa4bdff-2ae5-4c6b-8b64-2de1a30cd5a5" class=""><strong>India: </strong>Sociopolitical context/country history</h1><p id="43a34e2b-a32f-48e0-a930-c7841f964995" class="">India possesses a distinctive global position characterized by its status as a secular nation intertwined deeply with religion, a nation marked by intricate colonial legacies, and a nation grappling with intense identity politics amid significant state socio-political influence. Muslims in India hold a distinctive position as one of the nation&#x27;s largest and historically entrenched minority groups, making up around 15% of the countries population.</p><p id="0fdd2a5e-5120-436d-a1a8-2165a5b6ee35" class="">India lies in the heartland of South Asia, bordering countries such as Pakistan, Bangladesh, China, Myanmar in modern-day; thanks to its coastal trade ports and proximity to popular inland routes, India has been a long-existing hub of cultural diversity.</p><p id="b2584c39-d6a9-48bc-a974-46987582519f" class="">In pre-colonial times, India was ruled by different dynasties of rulers, such as the Maurya Empire, Gupta Empire, and the Mughal Empire. Thus, unlike other nation-states of the era, India experienced persistent mixing of cultures and nationalities, leading to a stronger sense of identity within each group. The Mughal Empire was, specifically, a long era of Muslim rule, only declining by the late 17th century due to a mix of external and internal factors. Consequently, Islam has been a persistent force in India for many centuries, leaving a rich legacy of history, culture, and architecture unique to the Indian subcontinent; however, it also left behind great tension between Hindus and Muslims, which would be taken advantage of and exacerbated in later centuries [<a href="https://www.cfr.org/backgrounder/india-muslims-marginalized-population-bjp-modi#chapter-title-0-3">Maizland</a>].</p><p id="0512cebc-8519-41ee-ad5e-5d144d039bd3" class="">India was then subsequently colonized under British rule, forming British Raj; this lasted from 1858 until 1947, in which India and Pakistan gained independence.</p><figure id="c4374df6-17cb-4701-84c2-feb1717dc9eb" class="image"><a href="Islamophobia%20132AC%20Final%20Project%20c32513ba525c44adabc6376605102369/Untitled.png"><img style="width:940px" src="Islamophobia%20132AC%20Final%20Project%20c32513ba525c44adabc6376605102369/Untitled.png"/></a></figure><p id="95d504cd-ddd4-4817-86f7-12cf468f48b2" class="">Post-British colonization, India established a secular government that followed traditional European infrastructure; however, this move did not alleviate complex and long-standing religious and political relationships between its many minority groups — including Hindus vs Muslims.</p><p id="4d809af0-6e94-4b60-9116-c40f1c1456b1" class="">Many events further exacerbated discontent along racial lines.</p><p id="37efe4f6-3eab-437d-9c75-585bf138c5fc" class=""><strong>The Partition of India (1947) [</strong><a href="https://www.notion.so/Islamophobia-132AC-Final-Project-c32513ba525c44adabc6376605102369?pvs=21"><strong>Minority Rights Group International</strong></a><a href="https://www.notion.so/Islamophobia-132AC-Final-Project-c32513ba525c44adabc6376605102369?pvs=21">.</a>]</p><p id="84633b3d-488f-464a-a479-54223f06de44" class="">With growing unrest at the turn of the century, India was forcibly partitioned into the states of India and Pakistan in a bid for religious separation. However, this move was fraught with violence, uprooting and displacing millions of Hindus, Muslims, and Sikhs, proving to be a deadly and traumatic memory in the lives of many modern-day Indians. In turn, this partition became a cause of resentment and anger for both sides, even establishing a precedent that certain groups do not belong in this country at all.</p><p id="2117ac0b-3073-465d-8e62-786a6b3df22e" class=""><strong>The Emergency (1975-1977)</strong></p><p id="9fdd4e73-4bc7-484d-ba43-73b1c563e060" class="">The Emergency refers to a period of civil unrest under Indian Prime Minister Indira Gandhi; Gandhi utilized authoritarian methods and suspended civil liberties to suppress dissenting voices within the government. Consequently, her campaign targeted and suppressed minorities, leading to cruel and inhumane acts such as media censorship, forced sterilization of marginalized communities, and persecution of political opponents [<a href="https://www.bbc.com/news/world-asia-india-30040790">bbc</a>].</p><p id="daae3ede-af2b-473b-8983-5a72ccc232dc" class=""><strong>Communal Riots</strong></p><p id="61033b1e-b7a2-43fb-b5d8-8961078872ea" class="">India also has a pattern of communal riots in response to extreme and divisive policies; these riots include the 2002 Gujarat Riots, 1989 Bhagalpur Riots, and the 2020 Delhi riots, among many others. These riots arise out of polarization and anger, and often target religious minorities such as Hindus, Muslims, Sikhs, and Christians; these violent outbreaks subsequently result  result in loss of life, damage to property, and worsen distrust among different communities, creating a vicious cycle.</p><figure id="9492b4d9-aa71-4bf4-8eb1-660c77ec4697" class="image"><a href="Islamophobia%20132AC%20Final%20Project%20c32513ba525c44adabc6376605102369/Untitled%201.png"><img style="width:659px" src="Islamophobia%20132AC%20Final%20Project%20c32513ba525c44adabc6376605102369/Untitled%201.png"/></a><figcaption>Gujarat Riots; source: <a href="https://www.wsj.com/articles/SB10001424052970204653604577248221780004442">WSJ</a> </figcaption></figure><h1 id="b0b9a6f3-62f3-4824-b2c5-4e028842c6a0" class="">4. Media, Films, and Images.</h1><p id="ee650aeb-90fb-443b-b0fb-fe1e3d0dea28" class="">Like many other countries, Muslims tend to be portrayed in a negative light. One such example is Bollywood film <em>Roja </em>(1992),<em> </em>in which the main characters husband is abducted by Muslim rebels from Kashmir. Muslim men are portrayed as predatory, violent, and cruel; Muslim women are portrayed as sex objects, lacking agency in their own lives. This is a similar phenomenon to what Jack Shaheen observed in the film <em>Reel Bad Arabs, </em>in which he analyzes the stereotypes and negative image of Muslims in American Hollywood [Shaheen]. These portrayals are insensitive, inaccurate, and attribute Muslim minorities to a monolith of traits.</p><figure id="e4504a66-6166-4b10-88f9-9fd2c24ef8fe" class="image"><a href="Islamophobia%20132AC%20Final%20Project%20c32513ba525c44adabc6376605102369/Untitled%202.png"><img style="width:686px" src="Islamophobia%20132AC%20Final%20Project%20c32513ba525c44adabc6376605102369/Untitled%202.png"/></a><figcaption><em>Roja (1992)</em></figcaption></figure><p id="fc4e435c-a747-428c-a5cf-5d4f9e67483d" class="">
+</p><p id="d7533430-2a4c-4984-b0ab-03866b9a0307" class="">However, with the rise of Hindu nationalist ideologies is the government sanctioning of Muslim vilification. One prime example is the film <em>The Kashmir Files</em> (2022), a film describing the forced exodus of Kashmiri Hindus from the Muslim-majority state of Kashmir. In it, Muslims are portrayed as separatist, oppressive, and needlessly cruel, driving out Hindus with a genocide. However, much of the film is actually dramatized and revisionist. Despite the clear sensationalism, the film’s narrative — of Hindus being oppressed by Muslims, of Muslims being a threat national identity — is heavily supported by the BJP, the ruling party of India. In fact, in some states, the BJP even promotes <em>The Kashmir Files </em>by making it tax-free <a href="https://www.hindustantimes.com/cities/chandigarh-news/bjp-promoting-the-kashmir-files-to-demonise-muslims-alleges-mehbooba-101669834743381.html">[hindu stan times]</a>.</p><p id="c77f918c-9e80-413c-b4e1-66d66643d589" class="">Films like <em>The Kashmir Files </em>have real consequences, to the point of fanning the flames of communal anger. In 2022 Ram Navami riots, Khargone saw violence with rhetoric quoting the movie — &quot;Wake up Hindus, lest other states in India become Kashmir” <a href="https://scroll.in/article/1022860/how-kashmir-files-added-to-communal-fires-in-khargone-that-ended-with-bulldozer-injustice">riots link</a>. Politicians also echo rhetoric from the movie — with Narendra Modhi praising the film for &quot;[revealing] the truth” [<a href="https://scroll.in/article/1019708/how-the-bjp-is-promoting-the-kashmir-files-modis-endorsement-tax-breaks-leave-from-work">modhi link</a>]. Ultimately, Muslims in media becomes a vehicle of both latent and manifest Islamophobia, being a source of stereotyping and political propaganda alike.</p><h1 id="b90ca527-ec02-4a79-8be5-a28465ba797c" class="">5. Legal restrictions on Muslim citizens and immigrants/refugees from Muslim-majority states.</h1><p id="9a7d7867-1bbd-4992-8b13-d4de02c234bd" class="">Despite being India’s largest minority, Muslims are fundamentally limited in rights and representation alike. </p><figure id="e79f7acd-f1b1-40ca-b44e-8b210ff461bd" class="image"><a href="Islamophobia%20132AC%20Final%20Project%20c32513ba525c44adabc6376605102369/Untitled%203.png"><img style="width:600px" src="Islamophobia%20132AC%20Final%20Project%20c32513ba525c44adabc6376605102369/Untitled%203.png"/></a><figcaption>2019 CAA protests; source: <a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.livemint.com%2Fnews%2Findia%2Fwhat-is-caa-the-law-which-led-to-massive-protests-in-2019-citizenship-amendment-act-all-you-need-to-know-11710172923021.html&amp;psig=AOvVaw2c-uKAmVBjLXpd2_wuSyfm&amp;ust=1714706153405000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjhxqFwoTCKDPgauA7oUDFQAAAAAdAAAAABAh">Mint</a></figcaption></figure><p id="8448b591-549e-4e09-8a99-a4c6d5b5054d" class="">The 2019 Citizenship Amendment Act (CAA) provided a clear path of nationalization for refugees from six religious minorities — Hindu, Sikh, Buddhist, Jain, Parsi, and Christian — but neglected Muslims, an arguably larger portion of neighboring countries. In turn, Muslim refugees from nearby states find it difficult to legally emigrate to India.</p><p id="f7d924dd-a0a4-4bfb-9e30-0763fef7a56a" class="">Simultaneously, this bill also required current citizens to prove their legality; this proved to be difficult for many minorities, despite living on the land for generations. Muslim families were at risk of being “stripped of their citizenship rights” in the name of a unifying citizenship; ultimately, this law drew fire from multiple international organizations such as the International Religious Freedom (USCIRF), the United Nations (UN), and Human Rights Watch for being a cover for government-sanctioned discrimination and disenfranchisement. This also indirectly led to riots over legitimate citizenship, once again propelling a cycle of violence between religious groups [<a href="https://www.hrw.org/news/2020/04/09/india-protests-attacks-over-new-citizenship-law">Human Rights Watch</a>].</p><figure id="74bcf001-3ea6-432b-83c2-a3e62c1638c9" class="image"><a href="Islamophobia%20132AC%20Final%20Project%20c32513ba525c44adabc6376605102369/Untitled%204.png"><img style="width:834px" src="Islamophobia%20132AC%20Final%20Project%20c32513ba525c44adabc6376605102369/Untitled%204.png"/></a><figcaption>Caste constitution; source: <a href="https://www.pewresearch.org/decoded/2021/06/29/measuring-caste-in-india/">Pew Research</a></figcaption></figure><p id="8995cf42-dff2-47c5-97e7-6f8051c18132" class="">The reservation system in India, initially introduced by the British government as a form of affirmative action to represent historically disadvantaged groups, extends across various facets of Indian society, including education, employment, and governmental representation. However, despite constituting the largest minority in India, Muslims find themselves excluded from significant representation. Instead, they are categorized under the Other Backward Class (OBC) designation, along with other minorities and lower-caste Hindus — despite being the largest minority. OBCs are estimated to make up over 60% of the population, yet fight for 27% of the seats in a reservation system; within  OBCs, Muslims have to compete. Ultimately, this leads to a lack of representation and avenues for higher education within government — in fact, Muslims hold less than 5% of positions in governing bodies (&quot;<a href="https://uk.news.yahoo.com/muslims-face-dwindling-representation-modis-032210551.html?guccounter=1&amp;guce_referrer=aHR0cHM6Ly93d3cuZmFpcnBsYW5ldC5vcmcv&amp;guce_referrer_sig=AQAAAGhuwIfyBlCXJOFfbZX5446xMZKZ4kA2i-Ut64l_b63brnDoa37kuUip7FjlbTN9kOV1klKbLgxgiM1-zkqG-">Muslims face dwindling representation in Modi&#x27;s India</a>&quot;). </p><h1 id="0af3fe95-0f6c-4119-a099-30a9b1e3fc09" class="">6. Economic restrictions.</h1><p id="bcef5caa-21d9-494c-96a4-7b438d41f94c" class="">While there are no laws that explicitly target Muslim minorities, many states of India establish laws that indirectly and disproportionately affect its Muslim citizens.</p><p id="ef3f4530-7eeb-4b2d-b078-4c7c033ee02d" class="">One such example include cow protection laws. Hinduism treats cows as sacred and holy; this, many states pass laws that are structured to protect cows. However, many Muslims rely on cattle farming, dairy farming, or meat industry-related roles for economic support. Thus, when laws meant to protect cattle are passed — such as banning the cattle trade, or limiting the sale of cattle — one group is disproportionately affected compared to the other.</p><p id="36605bec-a5cd-447b-b625-05f5b1affc01" class="">One such example is the Maharashtra Animal Preservation Act of 2015, which prohibited cow slaughtering (<a href="https://lj.maharashtra.gov.in/Site/Upload/Acts/H%2062-2016.pdf">Maharashtra Act No. IX of 1977</a>). </p><p id="e94b591e-7922-4c44-ba96-f4381fd49e8f" class="">Initially presented as legislation aimed at providing economic assistance to industries dependent on cow byproducts, this law carried severe penalties for non-compliance, with punishments ranging from 10 years to life imprisonment, varying based on the statutes of individual states. Furthermore, laws also often put the burden of proof on the accused, resulting in disproportionate prosecution of Muslim cattle ranchers (<a href="https://www.notion.so/Islamophobia-132AC-Final-Project-c32513ba525c44adabc6376605102369?pvs=21">Patel 260</a>).This gave rise to the idea of “cow lynching”, where mobs violently target minorities in the name of cow protection. Once again, the government passively supports this injustice – “police often stalled prosecutions of the attackers, while several BJP politicians publicly justified the attacks” (Human Rights Watch).</p><p id="184f9872-93f5-472c-9e18-0b4d370158e4" class="">
+</p><p id="6454f38a-8583-4682-9396-0162467c0077" class="">
+</p><p id="ea596662-37f5-4cc6-b3fe-257c4210eda2" class=""><strong>Sources</strong></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
